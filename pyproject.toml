@@ -1,9 +1,0 @@
-[tool.pyright]
-pythonVersion = "3.11"
-pythonPlatform = "All"
-# Tell Pylance/Pyright that the project root IS the search root,
-# so `from backend.database.database import get_db` resolves correctly.
-extraPaths = ["."]
-
-[tool.pytest.ini_options]
-pythonpath = ["."]
