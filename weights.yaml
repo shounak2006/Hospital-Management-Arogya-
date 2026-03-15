@@ -1,0 +1,19 @@
+# Hospital Ranking Weights
+# These weights determine how each factor contributes to the final hospital score.
+# All weights should sum to 1.0
+
+ranking_weights:
+  rating: 0.15              # w1 - Google/platform rating (0-5 normalized)
+  sentiment: 0.10           # w2 - NLP sentiment score from reviews
+  distance: 0.20            # w3 - Proximity to user (closer = higher)
+  specialization_match: 0.20 # w4 - Match with required specialization
+  affordability: 0.05       # w5 - Cost affordability score
+  availability: 0.15        # w6 - Predicted bed/capacity availability
+  waiting_time: 0.10        # w7 - Predicted waiting time (lower = higher)
+  trust_score: 0.05         # w8 - Review authenticity trust score
+
+# Maximum distance in km for nearby hospital search
+max_search_radius_km: 30
+
+# Maximum waiting time baseline (minutes) for normalization
+max_waiting_time_minutes: 120
